@@ -56,17 +56,27 @@ nav ul li:nth-child(1)::after {
 nav ul li:nth-child(1):hover::after {
   width: 100%;
 }
-ul li::after {
+ul li::after,
+ul li::before {
   content: "";
   position: absolute;
   left: 0;
   bottom: -10px;
   border-radius: 8px;
   width: 0;
-  height: 3px;
-  background-color: red;
+  height: 4px;
   transition: 0.5s;
 }
+ul li::after {
+  background-color: red;
+}
+ul li::before {
+  width: 6px;
+  background-color: #fff;
+  left: 5px;
+  z-index: 99999;
+}
+
 ul li:hover::after {
   width: 100%;
 }
