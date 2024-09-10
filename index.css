@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.container {
+  width: 100%;
+  height: 300vh;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+/* ----------------- Nav Bar ---------------------- */
+nav {
+  width: 80%;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 2.5% 10%;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  box-shadow: 1px 4px 5px #33333371;
+  z-index: 1;
+}
+nav img {
+  width: 100px;
+  height: 40px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  padding-left: 10px;
+}
+nav ul {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+nav ul li {
+  position: relative;
+  list-style: none;
+}
+nav ul li:nth-child(1) a {
+  color: green;
+}
+nav ul li:nth-child(1)::after {
+  position: absolute;
+  width: 70%;
+}
+nav ul li:nth-child(1):hover::after {
+  width: 100%;
+}
+ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  border-radius: 8px;
+  width: 0;
+  height: 3px;
+  background-color: red;
+  transition: 0.5s;
+}
+ul li:hover::after {
+  width: 100%;
+}
+ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333bc;
+}
+ul li a:hover {
+  color: rgba(0, 128, 0, 0.651);
+}
+nav button {
+  width: 100px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(255, 0, 0) 20%,
+    rgb(84, 6, 6)
+  );
+  color: #fff;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 1px 4px 5px #9203037d;
+  cursor: pointer;
+  transition: 0.5s;
+}
+nav button:hover {
+  border: 1px solid #3333339a;
+  background-image: none;
+  color: black;
+}
+/* ----------------------------------------------------- */
+.headerImg {
+  width: 90%;
+  height: 200px;
+  border-radius: 20px;
+  position: absolute;
+  top: 20%;
+  background: linear-gradient(
+      to right,
+      rgba(0, 128, 0, 0.929),
+      rgba(0, 128, 0, 0.721)
+    ),
+    url(Images/2x.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+.headerImg h1 {
+  margin-top: 2%;
+  font-size: 60px;
+  color: #fff;
+}
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 680px;
+  height: 150px;
+  position: absolute;
+  top: 320px;
+}
+.input {
+  width: 100%;
+  padding: 15px 25px;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  position: absolute;
+  box-shadow: 1px 4px 5px #33333389;
+  font-size: 20px;
+  transition: 0.5s;
+}
+.input:focus {
+  padding: 15px 40px;
+}
+.dates {
+  margin-top: 15px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dates button {
+  width: 90px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: transparent;
+  padding: 12px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  position: relative;
+  top: 70px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.dates button:nth-child(1) {
+  color: #fff;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(255, 0, 0) 20%,
+    rgb(84, 6, 6)
+  );
+}
+.dates button:hover {
+  color: #fff;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(255, 0, 0) 20%,
+    rgb(84, 6, 6)
+  );
+  box-shadow: 1px 4px 5px #33333371;
+}
+/* ----------------------------- First New----------------------------- */
+.firstNew {
+  width: 90%;
+  height: 450px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 500px;
+}
+.firstNew .leftImg {
+  width: 50%;
+  height: 100%;
+  border-radius: 25px;
+}
+.firstNew .txt {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0 0 25px;
+}
+.txt h2 {
+  font-size: 32px;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+.txt p {
+  font-size: 20px;
+  width: 90%;
+  line-height: 1.5;
+}
+/* ---------------------------- All News -------------------------------- */
+.news {
+  width: 90%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  position: relative;
+  top: 1100px;
+}
+.news .box {
+  width: 400px;
+  height: fit-content;
+  margin: 20px;
+  padding-bottom: 10px;
+}
+.news .box img {
+  width: 400px;
+  height: 300px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.box h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.dateNew {
+  color: rgb(6, 158, 6);
+  font-weight: bold;
+  font-size: 18px;
+}
+p {
+  font-weight: 800px;
+  line-height: 1.4;
+}
+/* ------------------------------ Form -------------------------- */
+.form {
+  width: 90%;
+  height: 80vh;
+  border-radius: 25px;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 0, 0, 0.603),
+      rgba(255, 0, 0, 0.481)
+    ),
+    url(Images/93604210100084640360no.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  top: 1150px;
+  display: flex;
+}
+.form form {
+  width: 550px;
+  height: 100%;
+  background-color: #fff;
+  margin: 0 70px 0 70px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0 0 30px;
+}
+.form input {
+  width: 90%;
+  padding: 12px;
+  outline: none;
+  border-radius: 12px;
+  margin: 10px 0;
+  border: 1px solid #33333371;
+  color: #000;
+  font-weight: 700;
+  font-size: 18px;
+  transition: 0.5s;
+}
+.submit {
+  border: 1px solid red;
+  background-color: transparent;
+  transition: 0.5s;
+}
+.submit:hover {
+  color: #fff;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(255, 0, 0) 20%,
+    rgb(84, 6, 6)
+  );
+  cursor: pointer;
+}
+.form .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+}
+.check input {
+  padding: 0;
+  margin: 0;
+}
+/* ---------------------------------------------- */
+.title {
+  padding-top: 50px;
+  color: #fff;
+}
+.title h2 {
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: 30px;
+  position: relative;
+}
+.title h2::after {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 5px;
+  background-color: #fff;
+  left: 0;
+  bottom: -5px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+
+.title h4 {
+  padding-bottom: 25px;
+  font-size: 25px;
+}
+.title li {
+  list-style: decimal;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 0;
+}
